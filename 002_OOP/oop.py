@@ -74,14 +74,14 @@ print("-----------------------------------")
     
         
 #     def get_details(self):
-#         print(self.name, self.age)
+#         print("benim adım", self.name, "yaşım", self.age)
     
 #     def __str__(self):
 #         return f"{self.name} - {self.age}"
 
 
 # person1 = Person("henry", 18)
-# # person1.get_details()
+# person1.get_details()
 
 # person2 = Person("selçuk", 22)
 # # person2.get_details()
