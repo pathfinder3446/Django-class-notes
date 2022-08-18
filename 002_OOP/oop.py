@@ -167,7 +167,8 @@ emp1 = Employee("vic", 32, "FS", ["pyhton", "JS"])
 # emp1.display_langs()
 
 
-#! inner class
+# ! inner class
+
 
 # from django.db import models
 
@@ -207,6 +208,7 @@ emp1 = Employee("vic", 32, "FS", ["pyhton", "JS"])
 
 
 print("-----------------------------------")
+
 
 
 
