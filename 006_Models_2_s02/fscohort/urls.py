@@ -1,7 +1,9 @@
 from django.urls import path, include
+from .views import fscohort, subfolder
 
 
 urlpatterns = [
-        path('', home),
+        path('', fscohort),
+        path('subfolder/', subfolder),
    
 ]
