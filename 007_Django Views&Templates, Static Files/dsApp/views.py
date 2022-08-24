@@ -11,4 +11,4 @@ from django.http import HttpResponse
 #     return HttpResponse(html)
 
 def home(request):
-    return render(request, 'fsApp/index.html')
+    return render(request, 'dsApp/index.html')
