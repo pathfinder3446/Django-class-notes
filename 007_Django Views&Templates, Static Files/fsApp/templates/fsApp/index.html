@@ -1,1 +1,18 @@
 <h1>This page fsApp index page</h1>
+<br>
+{# comment line #} {{ caption | title }}
+<br>
+<ul>
+    {% for i in my_list %}
+    <li>
+        {{ i }}
+    </li>
+    {% endfor %}
+</ul>
+
+<!-- This is a HTML comment -->
+  
+  {% comment %} 
+  This is multi line 
+  comment
+  {% endcomment%}
