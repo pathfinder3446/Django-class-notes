@@ -1,7 +1,7 @@
-import re
 from .models import Student
 from django.shortcuts import render, redirect
 from .forms import StudentForm
+from django.contrib import messages
 
 def index(request):
     return render(request, 'fscohort/index.html')
@@ -24,6 +24,7 @@ def student_add(request):
         form = StudentForm(request.POST)   
         if form.is_valid():				   
             form.save()
+            messages.success(request, "student created succesfully!")
             return redirect("list")					   
     context = {
         'form' : form
@@ -37,6 +38,7 @@ def student_update(request,id):
         form=StudentForm(request.POST, instance=student)
         if form.is_valid():
             form.save()
+            messages.success(request, "student updated succesfully!")
             return redirect('list')
     context={
         'form':form
@@ -49,4 +51,15 @@ def student_delete(request,id):
     if request.method=='POST':
         student.delete()
         return redirect('list')
-    return render(request, 'fscohort/student_delete.html')
+    context = {
+        'student': student,
+    }
+
+    return render(request, 'fscohort/student_delete.html',context)
+
+def student_detail(request,id):
+    student=Student.objects.get(id=id)
+    context = {
+        'student': student,
+    }
+    return render(request, 'fscohort/student_detail.html',context)

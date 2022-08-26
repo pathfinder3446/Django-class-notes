@@ -5,6 +5,7 @@
     <form action="" method="POST">
         {% csrf_token %}                   
         {{form.as_p}}						   
-        <input type="submit" value="add">
-    </form>
+        <input type="submit" value="Add">
+    </form> <br>
+    <a href="{% url 'list' %}"><button>Cancel</button></a>
 {% endblock container %}
