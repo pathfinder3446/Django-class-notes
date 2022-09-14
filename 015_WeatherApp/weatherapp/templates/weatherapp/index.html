@@ -36,8 +36,8 @@
                 <h1 class="d-2 text-center m-5">Weather App</h1>
 
                 <form class="d-grid gap-4 mb-5 shadow p-5" method="post">
-                    <input class="form-control mt-3" type="text" name="name" placeholder="City name">
                     {% csrf_token %}
+                    <input class="form-control mt-3" type="text" name="name" placeholder="City name">
                     <input class="btn btn-success mb-3" type="submit" value="ADD">
                 </form>
 
