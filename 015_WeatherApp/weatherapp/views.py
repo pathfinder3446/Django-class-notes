@@ -44,7 +44,6 @@ def index(request):
     context = {
         "city_data" : city_data
     }
-    
     return render(request, 'weatherapp/index.html', context)
 
 
