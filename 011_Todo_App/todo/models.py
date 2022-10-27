@@ -13,6 +13,7 @@ priority_choices = [
     ('3', '3️⃣'),
     ('4', '4️⃣'),
     ('5', '5️⃣'),
+    
 ]
 
 class Todo(models.Model):
